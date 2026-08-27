@@ -1,0 +1,67 @@
+\documentclass[times, twoside]{style/axelgomez-article}
+% Add "watermark" as a class option (e.g. [times, twoside, watermark]) to
+% stamp every page with a "DRAFT" watermark while the article is in progress.
+\usepackage{blindtext} % provides the \Blindtext / \blindtext filler text below
+
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+
+% Footer label shown next to the page numbers (e.g. journal/conference name).
+\journalname{Preprint}
+
+% Surname of the lead/corresponding author, used in the running footer.
+\leadauthor{Gomez}
+
+\begin{document}
+
+\title{Article Title Goes Here}
+\shorttitle{Short Running Title}
+
+% Use letters for affiliations, numbers for equal authorship, \Letter for the corresponding author.
+\author[1,\Letter]{Axel Gomez}
+\author[1]{Jane Doe}
+\author[2]{John Smith}
+\author[2,3]{Maria Perez}
+\author[3]{Carlos Ruiz}
+
+\affil[1]{Your Institution, Department, City, Country}
+\affil[2]{Second Institution, Department, City, Country}
+\affil[3]{Third Institution, Department, City, Country}
+
+\maketitle
+
+%TC:break Abstract
+%the command above serves to have a word count for the abstract
+\input{sections/abstract}
+%TC:break main
+%the command above serves to have a word count for the abstract
+
+\begin{keywords}
+bla | bla | bla | bla
+\end{keywords}
+
+\begin{corrauthor}
+axel.gomez\at example.com
+\end{corrauthor}
+
+\input{sections/introduction}
+\input{sections/methods}
+\input{sections/results}
+\input{sections/discussion}
+\input{sections/conclusions}
+
+\section*{Bibliography}
+\bibliography{bib/references}
+
+%% You can use these special %TC: tags to ignore certain parts of the text.
+%TC:ignore
+%the command above ignores this section for word count
+\onecolumn
+\newpage
+
+\input{sections/supplementary}
+
+%TC:endignore
+%the command above ignores this section for word count
+
+\end{document}

@@ -1,0 +1,42 @@
+\section*{Results}
+
+Just for kicks here's a citation \cite{example2024}. And a reference to a supplement \cref{note:Note1}. And \nameref{note:Note1}.
+\Blindtext
+
+\begin{figure}%[tbhp]
+\centering
+\includegraphics[width=.8\linewidth]{Figure_1}
+\caption{Placeholder image with a long example caption to show justification setting.}
+\label{fig:computerNo}
+\end{figure}
+
+\Blindtext
+
+Figure \ref{fig:computerNo} shows an example of how to insert a column-wide figure. To insert a figure wider than one column, please use the \verb|\begin{figure*}...\end{figure*}| environment. Figures wider than one column should be sized to 11.4 cm or 17.8 cm wide. Use \verb|\begin{SCfigure*}...\end{SCfigure*}| for a wide figure with side captions.
+
+\vspace{1em}
+\begin{table}[htp]
+\begin{center}
+\caption[Example results table]{Example results table, following the same layout used across my thesis chapters. Placeholder values.}
+\label{tab:example}
+\begin{tabular}{clclc}
+\hline
+Method &  & Metric &  & Value \\ \hline
+\multicolumn{1}{l}{} & & \multicolumn{1}{l}{} & & \multicolumn{1}{l}{} \\
+
+Baseline & & Accuracy & & 87.2\% \\
+
+\multicolumn{1}{l}{} & & \multicolumn{1}{l}{} & & \multicolumn{1}{l}{} \\
+
+Proposed & & Accuracy & & 94.6\% \\
+
+\multicolumn{1}{l}{} & & \multicolumn{1}{l}{} & & \multicolumn{1}{l}{} \\
+
+Proposed & & Latency (ms) & & 12.4 \\
+
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Table \ref{tab:example} shows an example of how to insert a results table using the same style as the thesis: a centered \texttt{tabular} with horizontal rules and blank spacer rows between entries.
