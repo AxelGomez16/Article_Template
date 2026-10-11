@@ -28,6 +28,8 @@ AxelGomez_Article_Template/
 │   └── Figure_1.png           # example figure, replace/add your own
 ├── bib/
 │   └── references.bib         # your bibliography (BibTeX)
+├── scripts/
+│   └── compile_local_latex.py # local pdflatex/bibtex compiler
 └── style/
     ├── axelgomez-article.cls  # document class (layout, macros)
     └── axelgomez-bib.bst      # bibliography style (unsrtnat-based)
@@ -43,11 +45,14 @@ AxelGomez_Article_Template/
 3. Add figures to `figures/` and reference them with
    `\includegraphics{your_figure}` (the graphics path is already set).
 4. Add citations to `bib/references.bib` and cite with `\cite{key}`.
-5. Compile `main.tex` with `pdflatex`/`latexmk` + `bibtex`/`biber`, e.g.:
+5. Compile `main.tex` with the included helper:
 
    ```
-   latexmk -pdf main.tex
+   python scripts/compile_local_latex.py
    ```
+
+   Add `--clean` to remove auxiliary files before compiling. The helper
+   runs `pdflatex`, `bibtex`, and two final `pdflatex` passes.
 
 ## Customization
 

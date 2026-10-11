@@ -19,3 +19,4 @@
 *.bcf
 *.run.xml
 *.pdf
+logs/
